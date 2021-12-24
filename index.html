@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button id="search-btn" class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="display-6" id="title-html">中級編</h1>
+      <p class="lead">ルール</p>
+      <div class="alert alert-danger" role="alert">
+        <ul>
+          <li><code>for</code>文を禁止します！</li>
+          <li><code>function</code>文を禁止します！</li>
+          <li>
+            作成した要素等は<code>&lt;div id="app"&gt;</code
+            >に描画(挿入)して下さい。
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container" id="app">
+      <p class="lead">要素はココに描画してください。</p>
+    </div>
+
+    <!-- Q1 -->
+    <div class="container">
+      <h1 class="display-3">Q1</h1>
+      <p class="lead">
+        <span class="badge bg-secondary">要素の描画＆map()関数</span><br />
+        ユーザの名前一覧を画面にリスト表示してみましょう。<br />
+        必ず<code>map()</code>関数を使ってください。
+      </p>
+      <div class="alert alert-info" role="alert">
+        <code>&lt;ul class="list-group"&gt;</code>
+        <code>&lt;li class="list-group-item"&gt;</code><br />
+        というクラス名を付けるといい感じになります。
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="container">
+      <h1 class="display-3">Q2</h1>
+      <p class="lead">
+        <span class="badge bg-secondary">filter()関数</span><br />
+        ユーザ一覧を、名前で検索する関数を作ってください。<br />
+        但し<code>return</code>文を使ってはいけません。
+      </p>
+    </div>
+
+    <!-- Q3 -->
+    <div class="container">
+      <h1 class="display-3">Q3</h1>
+      <p class="lead">
+        <span class="badge bg-secondary">イベントの設置、要素の置換</span><br />
+        Q1で作ったリストに、Q2で作った関数を使って、名前検索機能を実装しましょう。<br />
+        Searchボタンを押すと、検索ボックスに入力された任意の文字列でユーザを絞り込みます。
+      </p>
+      <div class="alert alert-info" role="alert">
+        <code>&lt;ul class="list-group"&gt;</code>
+        <code>&lt;li class="list-group-item"&gt;</code><br />
+        というクラス名を付けるといい感じになります。
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="container">
+      <h1 class="display-3">Q4</h1>
+      <p class="lead">
+        <span class="badge bg-secondary">イベントの設置、map()関数</span><br />
+        自身のアドレスをアラート表示する<code>showMessage()</code>関数があります。<br />
+        リストの各ユーザをクリックしたときに、この関数が実行される（つまりアラートが出る）ようにしてください。<br />
+      </p>
+      <div class="alert alert-info" role="alert">
+        <code>showMessage()</code>を書き換えてはいけません。<br />
+        必ずこの状態のまま使用してください。
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="container">
+      <h1 class="display-3">Q5</h1>
+      <p class="lead">
+        <span class="badge bg-secondary">要素の複製、変更、挿入</span><br />
+        リストがしょぼいので、ユーザ情報を表示するカードを作りましょう。<br />
+        名前、アドレス、職業をまとめて表示させて上げましょう。
+      </p>
+      <div class="alert alert-info" role="alert">
+        <code>document.createElement</code
+        >とかそろそろ面倒くさいですよね。。<br />
+        ご安心ください。templateをご用意致しましたw<br />
+        <code>&lt;div class="col"&gt;</code
+        >を複製すればいい感じに行けると思います。<br />
+        どうやって複製するかって？自分で調べましょう。
+      </div>
+      <div class="alert alert-info" role="alert">
+        出来上がったリストを、<code
+          >&lt;div class="row row-cols-1 row-cols-md-3"&gt;</code
+        ><br />
+        でラップして上げると綺麗にレイアウトできます。
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="container">
+      <h1 class="display-3">Q6</h1>
+      <p class="lead">
+        <span class="badge bg-secondary">filter()関数+α</span><br />
+        ついでにQ3で作った検索機能も拡張しましょう。<br />
+        name,email,job全て(OR条件)で絞り込めるようにしましょう
+      </p>
+      <div class="alert alert-info" role="alert">
+        <code>some()</code>という配列関数を使うといいかもしれません。<br />
+      </div>
+    </div>
+
+    <!-- template -->
+    <div id="template" style="display: none;">
+      <div class="col">
+        <div class="card h-100">
+          <!-- <img src="#" class="card-img-top" alt="User Avatar" /> -->
+          <div class="card-body">
+            <h5 class="card-name">User Name</h5>
+            <p class="card-email">User Email</p>
+            <p class="card-job">User Job</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
